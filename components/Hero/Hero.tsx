@@ -86,7 +86,7 @@ const Hero: FC<Props> = ({ imgProps, className, variant = 'default', bg }) => {
               }}
             >
               <motion.div variants={slideIn('up', 'tween', 0.2, 0.5)}>
-                <Text variant="heading">Full Stack Developer</Text>
+                <Text variant="heading" className='!text-white'>Full Stack Developer</Text>
               </motion.div>
             </div>
             <div className={s.title}>
