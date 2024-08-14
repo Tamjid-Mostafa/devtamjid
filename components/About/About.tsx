@@ -105,7 +105,7 @@ const About: FC<Props> = ({
               whileInView="show"
               variants={fadeIn('', 'tween', 0.5, 0.7)}
             >
-              <Text variant="body">
+              <Text variant="body" className='text-accent-6'>
                 <p>
                   👩‍💻 Welcome! I'm a Web Wizard 🧙‍♀️, conjuring up captivating
                   Front-end & Back-end magic 🌟 to bring Websites and Web

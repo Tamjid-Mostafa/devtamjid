@@ -2,6 +2,8 @@ import '@/assets/main.css'
 import '@/assets/chrome-bug.css'
 
 import { Caveat, Inter, Lora } from 'next/font/google'
+import { Providers } from '@/providers'
+import { ManagedUIContext } from '@/components/ui/context'
 // import { cn } from "@/lib/utils";
 
 const inter = Inter({
@@ -29,10 +31,9 @@ export default function RootLayout({
       className={`${(inter.variable, lora.variable, caveat.variable)}`}
     >
       <body className="text-gray-800 antialiased dark:bg-black dark:text-gray-400">
-        {/* <ManagedUIContext> */}
-        {/* <Providers>{children}</Providers> */}
-        {children}
-        {/* </ManagedUIContext> */}
+        <ManagedUIContext>
+        <Providers>{children}</Providers>
+        </ManagedUIContext>
       </body>
     </html>
   )

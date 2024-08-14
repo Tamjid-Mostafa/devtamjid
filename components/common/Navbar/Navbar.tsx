@@ -5,6 +5,8 @@ import s from './Navbar.module.css'
 import NavbarRoot from './NavbarRoot'
 import { Container, Logo, useUI } from '@/components/ui'
 import { FiMenu } from 'react-icons/fi'
+import { usePathname } from 'next/navigation'
+import { cn } from '@/lib/utils'
 
 interface Link {
   href: string
@@ -17,16 +19,8 @@ interface NavbarProps {
 
 const Navbar = ({ settings }: NavbarProps) => {
   const { openSidebar } = useUI()
-  console.log('Navbar', settings)
+const pathname = usePathname()
   const navLinks = [
-    {
-      label: 'Home',
-      href: '/',
-    },
-    {
-      label: 'Projects',
-      href: '/projects',
-    },
     {
       label: 'Blogs',
       href: '/blogs',
@@ -44,15 +38,17 @@ const Navbar = ({ settings }: NavbarProps) => {
   const links = navLinks
   return (
     <NavbarRoot>
-      <Container clean className="mx-auto max-w-8xl md:px-20 px-6">
+      <Container className="">
         <div className={s.nav}>
           <div className="flex items-center justify-between w-full">
             <Link href="/" className={s.logo} aria-label="Logo">
-              <Logo className="max-w-[400px] w-full h-16" />
+              <Logo className="max-w-[400px] w-full  text-accent-9" />
             </Link>
             <nav className={s.navMenu}>
               {links?.map((l) => (
-                <Link href={l.href} key={l.href} className={s.link}>
+                <Link href={l.href} key={l.href} className={cn(s.link, {
+                  ['font-bold !text-accent-9 scale-110']: l.href === pathname
+                } )}>
                   {l.label}
                 </Link>
               ))}

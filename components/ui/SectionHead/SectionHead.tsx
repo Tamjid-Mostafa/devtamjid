@@ -50,7 +50,7 @@ const SectionHead: React.FC<SectionHeadProps> = ({
               whileInView="show"
               variants={slideIn('up', 'tween', 0.1, 0.7)}
             >
-              <Text variant="heading" className="text-center">
+              <Text variant="heading" className="text-center text-accent-9">
                 {title}
               </Text>
             </motion.div>

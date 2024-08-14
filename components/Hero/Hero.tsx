@@ -1,9 +1,9 @@
-"use client"
+'use client'
 import React, { FC } from 'react'
 import { motion } from 'framer-motion'
 import { Button, Text } from '@/components/ui'
 import { fadeIn, slideIn, staggerContainer } from '@/lib/useAnimation'
-import { cn } from "@/lib/utils";
+import { cn } from '@/lib/utils'
 import s from './Hero.module.css'
 import { ImageProps } from 'next/image'
 import MouseScrollIcon from '@/components/ui/MouseScrollIcon'
@@ -14,12 +14,7 @@ interface Props {
   variant?: 'default' | 'middle' | 'simple'
   bg: string[]
 }
-const Hero: FC<Props> = ({
-  imgProps,
-  className,
-  variant = 'default',
-  bg
-}) => {
+const Hero: FC<Props> = ({ imgProps, className, variant = 'default', bg }) => {
   const rootClassName = cn(
     s.root,
     {
@@ -27,7 +22,7 @@ const Hero: FC<Props> = ({
       [s.middle]: variant === 'middle',
       [s.simple]: variant === 'simple',
     },
-    className
+    className,
   )
   const textItems = ['Tamjid Mostafa', 'Full Stack Developer']
   const value = `linear-gradient(140deg, ${bg[0]}, ${bg[1]} 100%)`
@@ -84,7 +79,7 @@ const Hero: FC<Props> = ({
             <div
               className={cn(
                 s.title,
-                'px-5 py-1 mb-2 text-white rounded-lg drop-shadow-md w-fit mx-auto'
+                'px-5 py-1 mb-2 rounded-lg drop-shadow-md w-fit mx-auto',
               )}
               style={{
                 backgroundImage: value,
@@ -101,11 +96,8 @@ const Hero: FC<Props> = ({
             </div>
           </div>
           <div className="min-h-min overflow-hidden">
-            <motion.div
-              variants={slideIn('up', 'tween', 0.6, 0.5)}
-              className={s.description}
-            >
-              <Text variant="heroBody">
+            <motion.div variants={slideIn('up', 'tween', 0.6, 0.5)}>
+              <Text variant="heroBody" className={s.description}>
                 Crafting exceptional web apps with Nextjs, React, Node.js,
                 MongoDB, Firebase, and more. Let's build something amazing
                 together! 🚀
@@ -114,7 +106,12 @@ const Hero: FC<Props> = ({
           </div>
           <div className="min-h-min overflow-hidden">
             <motion.div variants={slideIn('up', 'tween', 0.8, 0.5)}>
-              <Button Component={"a"} href='/contact' variant="flat" className={s.btn}>
+              <Button
+                Component={'a'}
+                href="/contact"
+                variant="flat"
+                className={s.btn}
+              >
                 Contact Me
               </Button>
             </motion.div>

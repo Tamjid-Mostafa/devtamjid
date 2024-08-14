@@ -11,18 +11,18 @@ interface LabelProps {
 const Label: React.FC<LabelProps> = (props) => {
   const color = {
     green: "text-emerald-700",
-    blue: "text-blue-600",
+    blue: "text-blue",
     orange: "text-orange-700",
-    purple: "text-purple-600",
-    pink: "text-pink-600",
+    purple: "text-purple",
+    pink: "text-pink",
   };
 
   const bgcolor = {
     green: "bg-emerald-50",
-    blue: "bg-blue-50",
+    blue: "bg-blue",
     orange: "bg-orange-50",
-    purple: "bg-purple-50",
-    pink: "bg-pink-50",
+    purple: "bg-purple",
+    pink: "bg-pink",
   };
 
   const margin = props.nomargin;
@@ -31,7 +31,7 @@ const Label: React.FC<LabelProps> = (props) => {
     return (
       <div
         className={
-          "inline-flex items-center justify-center font-bold px-2 h-6 text-sm bg-blue-50 text-blue-500 rounded-full shrink-0 dark:bg-gray-800 dark:text-gray-300"
+          "inline-flex items-center justify-center font-bold px-2 h-6 text-sm bg-blue text-blue rounded-full shrink-0"
         }
       >
         {props.children}

@@ -13,9 +13,6 @@ export default async function IndexPage() {
         <div className="">
           <Hero variant="default" bg={bg} />
         </div>
-        {/* <Container className="p-10">
-      <FeaturedPost posts={blogs} />
-    </Container> */}
         <div className="my-10">
           <About bg={bg} />
         </div>

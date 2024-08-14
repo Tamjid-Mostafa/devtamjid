@@ -5,7 +5,7 @@
   @apply flex flex-col justify-center items-center gap-5 text-center h-[80vh];
 }
 .title {
-  @apply min-h-min overflow-hidden;
+  @apply min-h-min overflow-hidden text-accent-8;
 }
 
 .description {

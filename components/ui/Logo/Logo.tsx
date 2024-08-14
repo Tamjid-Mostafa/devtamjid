@@ -3,7 +3,7 @@ const Logo = ({ className = '', ...props }) => (
     className={className}
     {...props}
   >
-    <h1 className="font-bold text-xl">
+    <h1 className="font-bold text-3xl">
       DevTamjid
     </h1>
   </div>
