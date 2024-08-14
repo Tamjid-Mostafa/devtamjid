@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://www.devtamjid.com
+
+# Sitemaps
+Sitemap: https://www.devtamjid.com/sitemap.xml

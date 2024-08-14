@@ -1,0 +1,13 @@
+.description{
+    @apply text-start my-10 max-w-md;
+}
+
+.simple {
+ @apply flex justify-between;   
+}
+.center {
+
+}
+.left {
+
+}

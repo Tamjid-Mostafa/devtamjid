@@ -1,0 +1,6 @@
+.fit {
+  min-height: calc(100vh - 30vh);
+}
+html {
+  scroll-behavior: smooth;
+}

@@ -1,0 +1,19 @@
+.header {
+  @apply font-semibold text-2xl;
+  display: flex;
+  flex: none;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  overflow: hidden;
+  padding: 0;
+  position: relative;
+  width: 27%;
+}
+
+.simple {
+  @apply lg:flex block justify-center w-full gap-20;
+}
+.retro {
+  @apply lg:flex block justify-between w-full gap-20;
+}

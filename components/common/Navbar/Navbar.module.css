@@ -1,0 +1,30 @@
+.root {
+  @apply sticky top-0 bg-primary z-40 transition-all duration-150;
+  min-height: 74px;
+}
+
+.nav {
+  @apply relative flex flex-row justify-between py-4 md:py-4;
+}
+
+.navMenu {
+  @apply hidden space-x-10 lg:block;
+}
+
+.link {
+  @apply font-caveat inline-flex items-center leading-6
+  transition ease-in-out duration-75 cursor-pointer
+  text-2xl text-accent-5;
+}
+
+.link:hover {
+  @apply text-accent-9;
+}
+
+.link:focus {
+  @apply outline-none text-accent-8;
+}
+
+.logo {
+  @apply font-caveat cursor-pointer transform duration-100 ease-in-out p-2;
+}

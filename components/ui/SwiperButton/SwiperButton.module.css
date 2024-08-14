@@ -1,0 +1,15 @@
+.root {
+  @apply relative z-10;
+}
+.default {
+  @apply flex justify-between max-w-sm mx-auto;
+}
+
+.custom_next,
+.custom_prev {
+  @apply bg-accent-7 p-2 rounded-full text-accent-2 cursor-pointer;
+}
+.left {
+  @apply flex justify-start gap-10;
+}
+

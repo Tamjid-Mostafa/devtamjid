@@ -1,0 +1,11 @@
+.mouse_scroll_icon {
+  @apply absolute bottom-10 border border-accent-9 rounded-full cursor-pointer;
+}
+
+.mouse {
+  @apply w-6 h-10 flex items-center justify-center;
+}
+
+.wheel {
+  @apply w-2 h-2 bg-accent-9 rounded-full;
+}
