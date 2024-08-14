@@ -8,30 +8,30 @@ async function sharedMetaData(params: any) {
 console.log(settings);
   return {
     // enable this for resolving opengraph image
-    metadataBase: new URL(settings.url),
+    metadataBase: new URL(`${process.env.NEXT_PUBLIC_URL}`),
     title: {
-      default: settings?.title || 'Tamjid Mostafa - Full Stack Web Developer',
-      template: '%s | Tamjid',
+      default: 'Tamjid Mostafa - Full Stack Web Developer',
+      template: '%s | Devtamjid',
     },
     description:
-      settings?.description || 'Tamjid Mostafa - Full Stack Web Developer.',
+      'Tamjid Mostafa - Full Stack Web Developer.',
     keywords: ['Next.js', 'Sanity', 'Tailwind CSS', 'React'],
     authors: [{ name: 'Tamjid' }],
     alternates: {
-      canonical: settings?.url,
+      canonical: process.env.NEXT_PUBLIC_URL,
     },
     openGraph: {
       images: [
         {
-          url: urlForImage(settings?.openGraphImage)?.src || '/ogImage.png',
+          url: '/ogImage.png',
           width: 800,
           height: 600,
-          alt: settings?.title || 'Tamjid Mostafa',
+          alt: 'Tamjid Mostafa',
         },
       ],
     },
     twitter: {
-      title: settings?.title || 't4mjid',
+      title: 't4mjid',
       card: 'summary_large_image',
     },
     robots: {
