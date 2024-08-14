@@ -56,13 +56,7 @@ const resolver: Resolver<FormValues> = async (values) => {
   }
 }
 
-export default function Contact({
-  settings,
-  bg,
-}: {
-  settings?: any
-  bg: string[]
-}) {
+export default function Contact({ settings }: { settings?: any }) {
   const {
     register,
     handleSubmit,
@@ -117,22 +111,13 @@ export default function Contact({
   }
 
   return (
-    <Container>
-      <SectionHead
-        title="Contact"
-        description="I am here to help."
-        variant="center"
-        className={''}
-        bg={bg}
-      />
+    <>
       <div className="grid my-10 md:grid-cols-2">
         <div className="my-10">
-          <Text>
-            <p className="max-w-sm">
-              Have something to say? I am here to help. Fill up the form or send
-              email or call phone.
-            </p>
-          </Text>
+          <div className="max-w-sm">
+            Have something to say? I am here to help. Fill up the form or send
+            email or call phone.
+          </div>
 
           <div className="mt-5">
             <div className="flex items-center mt-2 space-x-2 text-accent-4">
@@ -161,7 +146,7 @@ export default function Contact({
               className="hidden"
               style={{ display: 'none' }}
               {...register('botcheck')}
-            ></input>
+            />
 
             <div className="mb-5">
               <input
@@ -249,6 +234,6 @@ export default function Contact({
           )}
         </div>
       </div>
-    </Container>
+    </>
   )
 }
